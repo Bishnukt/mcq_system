@@ -53,28 +53,16 @@ window.onload=()=>{
 		submit.setAttribute("disabled","");
 		document.getElementById('checker').innerHTML="";
 	}
-	console.log(options);
-	options[0].onclick=()=>{
-		console.log("Op1 clicked");
-		user_ans=options[0];
-		submit.removeAttribute("disabled");
+	
+	for(let i=0;i<options.length;i++)
+	{
+		options[i].onclick=()=>{
+			console.log(`op${i+1} clicked`);
+			user_ans=options[i];
+			submit.removeAttribute("disabled");
+		}
 	}
-	options[1].onclick=()=>{
-		console.log("Op2 clicked");
-		user_ans=options[1];
-		submit.removeAttribute("disabled");
-	}
-	options[2].onclick=()=>{
-		console.log("op3 clicked");
-		user_ans=options[2];
-		submit.removeAttribute("disabled");
-	}
-	options[3].onclick=()=>{
-		console.log("op4 clicked");
-		user_ans=options[3];
-		submit.removeAttribute("disabled");
-	}
-
+	
 	function change(){
 		val=data.next().value;
 		if(val==undefined)
