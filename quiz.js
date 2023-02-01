@@ -71,14 +71,6 @@ window.onload=()=>{
 		const no=val.ques_no,
 			ques=val.ques,
 			ans=val.ans;
-		//	op1=val.op1,
-		//	op2=val.op2,
-		//	op3=val.op3,
-		//	op4=val.op4;
-		//values[0].innerHTML=op1;
-		//values[1].innerHTML=op2;
-		//values[2].innerHTML=op3;
-		//values[3].innerHTML=op4;
 		for(let i=0;i<values.length;i++)
 			values[i].innerHTML=val[`op${i+1}`];
 		document.getElementById('ques').innerHTML=`${no}. ${ques}`;
